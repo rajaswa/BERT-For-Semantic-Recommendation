@@ -11,6 +11,13 @@
 9. Select top-n (n=100) entries
 10. Cluster the entries with their contextual embeddings with k-means clustering (k=10)
 11. Find cosine similarity between cluster heads and the input query, and rank clusters accordingly
-12. Select the top ranked clusters
-13. Rank the cluster head as one, rank other entries in cluster according to the cosine similarity with the cluster
+12. Select the top ranked clusters (n=1)
+13. For ranking the entries within the top cluster, rank the cluster head as one, rank other entries in cluster according to the cosine similarity with the cluster head
 14. Output the ranked entries as final recommendations
+
+### Code Instructions
+
+1. Download the CMU Book summary dataset
+2. Run *book_summary.ipynb*
+3. Run *phrase_extraction.ipynb*
+4. 

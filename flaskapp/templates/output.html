@@ -2,28 +2,385 @@
 <html>
 <head>
 	<title> Your Recommends are Here!!</title>
+
+	<style type="text/css">
+	table.one {
+    float:left;
+    width:80%;
+    }
+
+	table.two {
+    width:15%;
+    float:right;
+	}​
+	</style>
 </head>
 <body>
 
-	<table border="1" summary="gives the recommendations to the user">	
+	<!-- <form action = "{{ url_for('feedback') }}" method="POST"> -->
+	<table class="one" border="1px"  summary="gives the recommendations to the user">	
 		<caption><strong> Books Matching Your Query </strong></caption>
+		<br>
 		<thead>
 			<tr>
 				<th>Book Title</th>
 				<th>Book Author</th>
 				<th>Book Summary</th>
+				<!-- <th>Are you Satisfied with the Suggestion</th> -->
 			</tr>
 		</thead>
 		<tbody>
-			{% for book in recommendations %}
+			
+			<!-- {% set i = namespace(value=0) %} -->
+			{% for book in recommendations %}	
 				<tr>
 					<td> {{ book.book_title }} </td>
 					<td> {{ book.book_author }} </td>
 					<td> {{ book.summary }} </td>
+					<!-- <td>   						
+						<label> Yes</label>
+						<input type="radio" name="{{book.book_title}}" value="Y">
+						<br><br>
+						<label>  No</label>
+						<input type="radio" name="{{book.book_title}}" value="N">		
+					</td> -->
 				</tr>
+			<!-- {% set i.value = i.value + 1 %} -->
 			{% endfor %}
+		
 		</tbody>
 	</table>
-	
+
+	<form action = "{{ url_for('feedback') }}" method="POST">
+	<table class="two" border="1px">
+		<thead>
+			<tr>
+				<th>Are you Satisfied with the Suggestion</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed1" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed1" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed2" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed2" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed3" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed3" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed4" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed4" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed5" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed5" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed6" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed6" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed7" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed7" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed8" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed8" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed9" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed9" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed10" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed10" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed11" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed11" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed12" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed12" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed13" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed13" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed14" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed14" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed15" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed15" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed16" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed16" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed17" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed17" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed18" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed18" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed19" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed19" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed20" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed20" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed21" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed21" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed22" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed22" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed23" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed23" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed24" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed24" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed25" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed25" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed26" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed26" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed27" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed27" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed28" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed28" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed29" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed29" value="N">
+				</td>			
+			</tr>
+
+			<tr>
+				<td style ="height:400px">
+					<label> Yes</label>
+					<input type="radio" name="feed30" value="Y">
+					<br>
+					<label>  No</label>
+					<input type="radio" name="feed30" value="N">
+				</td>			
+			</tr>
+
+			
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<th style ="height:200px">
+					<label> Enter Your Name:</label>
+					<input type="text" name="username">
+				</th>
+			</tr>
+
+			<tr>
+				<th style ="height:200px">
+					<input type="submit" name="submit" value="feedback">
+				</th>
+			</tr>
+
+		</tfoot>
+
+	</table>	
+	<!-- <input type="submit" name="submit" value="feedback"> -->
+	</form>
 </body>
 </html>
